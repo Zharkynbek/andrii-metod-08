@@ -30,19 +30,13 @@
 .main-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
 }
 
 .site-navi {
   @extend %list;
-  display: none;
+  display: flex;
   margin: 0;
   padding: 0;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
   .item {
     margin-right: 50px;
   }
@@ -94,15 +88,11 @@
 }
 
 .link-type {
-  display: none;
+  display: flex;
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
   .item-info {
     display: flex;
     align-items: center;

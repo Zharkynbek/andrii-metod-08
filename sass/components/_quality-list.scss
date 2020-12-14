@@ -1,36 +1,59 @@
 .second-section {
   background-color: #fff;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+  }
 
   .second-list {
     @extend %list;
-    display: flex;
+    justify-content: space-between;
     margin: 0;
-    padding: 0;
+    padding-left: 0;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-    li {
+    /* li {
       margin-right: 30px;
     }
 
-    h3 {
+     h3 {
       width: 270px;
     }
 
     li:last-child {
       margin-right: 0;
-    }
+    } */
+  }
+}
+
+.second-icon:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.second-icon {
+  @media screen and (max-width: 768px) {
+    width: 354px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 270px;
   }
 }
 
 .second-skills {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: #f5f4fa;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .second-icon {
@@ -40,10 +63,14 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 1.142;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
 
   .second-text {
-    margin: 0;
+    width: 100%;
     font-weight: normal;
     font-size: 14px;
     line-height: 1.714;
